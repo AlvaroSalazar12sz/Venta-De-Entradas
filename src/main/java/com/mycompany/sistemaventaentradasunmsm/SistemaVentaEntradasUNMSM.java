@@ -1,16 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.mycompany.sistemaventaentradasunmsm;
 
-/**
- *
- * @author vayit
- */
+import controlador.CompraController;
+import modelo.SistemaVentaEntradas;
+import vista.CompraEntradaView;
+
 public class SistemaVentaEntradasUNMSM {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
+        SistemaVentaEntradas sistema = new SistemaVentaEntradas();
+        CompraController compraController = new CompraController(sistema);
+
+        CompraEntradaView ventana = new CompraEntradaView(compraController);
+        ventana.setVisible(true);
+        ventana.setLocationRelativeTo(null);
     }
 }
